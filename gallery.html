@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zavičaj | Galerija</title>
+    <script src="./javascript/script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body class="background-image">
+    <div class="tint"></div>
+    <nav>
+      <div id="logo-href">
+        <a href="index.html">ZAVIČAJ</a>
+      </div>
+      <div id="nav-href">
+        <a href="index.html">POČETNA</a>
+        <a href="gallery.html">GALERIJA</a>
+        <a href="menu.html">MENI</a>
+        <a href="calculator.html">KALKULATOR</a>
+        <a href="contact.html">KONTAKT</a>
+      </div>
+    </nav>
+    <h1 id="gallery-h1">GALERIJA</h1>
+    <div id="carousel"></div>
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+      <div class="column col-padding">
+        <img
+          src="./images/1.jpg"
+          onclick="openModal();currentSlide(1)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column col-padding">
+        <img
+          src="./images/2.jpg"
+          onclick="openModal();currentSlide(2)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column col-padding">
+        <img
+          src="./images/3.jpeg"
+          onclick="openModal();currentSlide(3)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column col-padding">
+        <img
+          src="./images/4.jpg"
+          onclick="openModal();currentSlide(4)"
+          class="hover-shadow"
+        />
+      </div>
+    </div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="./images/1.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="./images/2.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="./images/3.jpeg" style="width: 100%" />
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="./images/4.jpg" style="width: 100%" />
+        </div>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+        <!-- Thumbnail image controls -->
+        <div class="column">
+          <img
+            class="demo"
+            src="./images/1.jpg"
+            onclick="currentSlide(1)"
+            alt="Slika 1"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="./images/2.jpg"
+            onclick="currentSlide(2)"
+            alt="Slika 2"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="./images/3.jpeg"
+            onclick="currentSlide(3)"
+            alt="Slika 3"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="./images/4.jpg"
+            onclick="currentSlide(4)"
+            alt="Slika 4"
+          />
+        </div>
+      </div>
+    </div>
+    <footer class="fixed-footer">
+      <div>
+        <a href="https://www.instagram.com/zavicajnegotin/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="mailto:zavicajnegotin@gmail.com" target="_blank"
+          ><i class="far fa-envelope"></i
+        ></a>
+      </div>
+      <div>Copyright &copy; 2021 Jovan Simonović 2021240408</div>
+    </footer>
+  </body>
+</html>
