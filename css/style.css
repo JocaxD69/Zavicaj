@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .background-image {
   background-image: url(../images/background.jpg);
@@ -22,7 +23,6 @@
   bottom: 0;
   width: 100vw;
   min-height: 3vh;
-  overflow-x: hidden;
 }
 .tint {
   width: 100%;
