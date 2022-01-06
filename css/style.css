@@ -22,6 +22,7 @@
   bottom: 0;
   width: 100vw;
   min-height: 3vh;
+  overflow-x: hidden;
 }
 .tint {
   width: 100%;
