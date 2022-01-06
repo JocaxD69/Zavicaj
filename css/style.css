@@ -51,12 +51,12 @@ body {
 }
 /* Slider */
 .slider-right {
-  transform: translateX(-200%);
-  -webkit-transform: translateX(-200%);
+  transform: translateX(-250%);
+  -webkit-transform: translateX(-250%);
 }
 .slider-left {
-  transform: translateX(200%);
-  -webkit-transform: translateX(200%);
+  transform: translateX(250%);
+  -webkit-transform: translateX(250%);
 }
 .slide-in {
   animation: slide-in 1.5s forwards;
