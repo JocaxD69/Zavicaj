@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   overflow-x: hidden;
@@ -11,12 +12,16 @@ body {
 .fixed-background-image {
   background-image: url(../images/background.jpg);
 }
-.fixed-footer {
-  position: absolute;
-  bottom: 0;
+.menu-tint {
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
-.tint {
+.contact-tint {
   width: 100%;
   position: absolute;
   top: 0;
@@ -397,6 +402,11 @@ img.demo {
 #menu-list li:nth-child(9) {
   animation-delay: 1.6s;
 }
+.menu-fixed-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 /* CONTACT */
 #contact-h1 {
   color: white;
@@ -431,8 +441,8 @@ img.demo {
   flex-direction: column;
   padding: 20px;
   border-radius: 10px;
-  min-height: 400px;
-  min-width: 250px;
+  height: 450px;
+  width: 350px;
 }
 #send-message-container {
   background-color: rgba(0, 0, 0, 0.4);
@@ -442,18 +452,18 @@ img.demo {
   flex-direction: column;
   padding: 20px;
   border-radius: 10px;
-  min-height: 400px;
-  min-width: 250px;
+  height: 450px;
+  width: 350px;
 }
 label {
   color: white;
   font-size: 22px;
   padding-top: 5px;
   text-align: left;
-  min-width: 238px;
+  width: 250px;
 }
 .name-mail {
-  width: 70.8%;
+  width: 250px;
   font-family: quicksand, sans-serif;
   color: white;
   background-color: transparent;
@@ -469,7 +479,7 @@ textarea {
   font-family: quicksand, sans-serif;
   background-color: transparent;
   border: 2px solid white;
-  min-width: 231px;
+  width: 250px;
 }
 textarea:hover,
 input:hover {
@@ -488,10 +498,104 @@ textarea:focus {
   background-color: transparent;
   border: 2px solid white;
   margin-top: 10px;
-  width: 235px;
+  width: 250px;
   height: 30px;
 }
 #submit-button:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
+}
+.contact-fixed-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* MEDIA QUERY */
+@media only screen and (max-width: 320px) {
+  .fixed-background-image {
+    background-repeat: no-repeat;
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 0;
+  }
+  /* INDEX */
+  #index-info-container {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  #index-text {
+    width: 90%;
+  }
+  .index-info {
+    padding: 10% 0;
+  }
+  /* MENU */
+  .menu-tint {
+    height: 135%;
+  }
+  #menu-h1 {
+    padding-top: 35%;
+    margin-bottom: 0;
+  }
+  #menu-list {
+    display: block;
+    margin-top: 10%;
+  }
+  #menu-list li {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .menu-fixed-footer {
+    position: absolute;
+    bottom: -45%;
+    width: 100vw;
+    padding: 8px 0;
+  }
+  /* CONTACT */
+  .contact-tint {
+    height: 165%;
+  }
+  #contact-h1 {
+    padding-top: 35%;
+  }
+  #contact-div-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  #adress-map-container {
+    width: 95vw;
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  #send-message-container {
+    width: 90vw;
+    font-size: 16px;
+    margin-top: 5%;
+  }
+  iframe {
+    width: 100%;
+    height: 50%;
+  }
+  .contact-fixed-footer {
+    position: relative;
+    width: 100vw;
+    padding: 8px 0;
+    margin-top: 5%;
+  }
+  /* ANIMATIONS */
+  .slider-right {
+    transform: translateX(-110%);
+    -webkit-transform: translateX(-110%);
+  }
+  .slider-left {
+    transform: translateX(-110%);
+    -webkit-transform: translateX(-110%);
+  }
 }
